@@ -6,4 +6,6 @@ export interface Serie {
     fechas: string;
     imagen: string;
     canal: string;
+    // temporadas: string[];
+    temporadas: Array<string>;
 }
