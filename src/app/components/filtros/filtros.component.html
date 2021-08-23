@@ -1,1 +1,20 @@
-<p>filtros works!</p>
+<aside class="my-3">
+    <!-- <label class="form-label">Busqueda por titulo</label><br> -->
+    <input type="text" class="form-control" placeholder="titulo a buscar"
+        (input)="recogerDatoBusqueda($event)">
+</aside>
+<hr>
+<aside class="my-3">
+    <!-- <label class="form-label">Puntuacion mayor o igual a:</label><br> -->
+    <input type="number" class="form-control" min="0" max="10" [(ngModel)]="rating" placeholder="Puntuacion mayor o igual">
+    <button class="btn btn-dark mt-2" (click)="recogerRating()">Filtrar</button>
+</aside>
+<hr>
+<aside class="my-3">
+    <label class="form-label">Canal:</label><br>
+    <select class="form-select"  (change)="recogerCanal($event)" >
+        <option value="">Ver todos</option>
+        <option [value]="canal" *ngFor="let canal of arrCanal" >{{canal}}</option>
+    </select>
+</aside>
+
