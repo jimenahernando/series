@@ -1,1 +1,16 @@
-<p>lista-series works!</p>
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-12 col-md-3 p-3 filtros">
+            <!-- filtros -->
+            <app-filtros (filtroRating)="onFiltroRating($event)" (filtroCanal)="onFiltroCanal($event)" (busqueda)="onBusqueda($event)"></app-filtros>
+        </div>
+        <div class="col-12 col-md-9">
+            <!-- listaSeries -->
+            <div class="row g-4">
+                <article class="col-6 col-md-4 p-3" *ngFor="let serie of arrSeries">
+                    <app-thumbnail [serie]="serie"></app-thumbnail>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
